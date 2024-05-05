@@ -1,0 +1,56 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/kubernetes-helm-minikube
+{
+	"name": "Kubernetes - Minikube-in-Docker",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"enableNonRootDocker": "true",
+			"moby": "true"
+		},
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+			"version": "latest",
+			"helm": "latest",
+			"minikube": "latest"
+		},
+		"ghcr.io/devcontainers/features/go:1": {},
+		"ghcr.io/devcontainers/features/rust:1": {},
+		"ghcr.io/devcontainers-contrib/features/node-asdf:0": {},
+		"ghcr.io/devcontainers-contrib/features/prisma:2": {},
+		"ghcr.io/devcontainers-contrib/features/ts-node:1": {},
+		"ghcr.io/devcontainers-contrib/features/tsx:1": {},
+		"ghcr.io/devcontainers-contrib/features/zig:1": {},
+		"ghcr.io/guiyomh/features/golangci-lint:0": {},
+		"ghcr.io/guiyomh/features/gomarkdoc:0": {},
+		"ghcr.io/shyim/devcontainers-features/bun:0": {},
+		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/golang-wasi:0": {},
+		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/rust-wasi:0": {},
+		"ghcr.io/trunk-io/devcontainer-feature/trunk:1": {},
+		"ghcr.io/gickis/devcontainer-features/gomplate:1": {},
+		"ghcr.io/devcontainers-community/npm-features/typescript:1": {},
+		"ghcr.io/lee-orr/rusty-dev-containers/wasm-bindgen-cli:0": {},
+		"ghcr.io/lee-orr/rusty-dev-containers/wasm-server-runner:0": {},
+		"ghcr.io/lee-orr/rusty-dev-containers/wasm32-unknown-unknown:0": {},
+		"ghcr.io/marcozac/devcontainer-features/gofumpt:1": {},
+		"ghcr.io/marcozac/devcontainer-features/goreleaser:1": {},
+		"ghcr.io/audacioustux/devcontainers/wasm-toolchain:1": {},
+		"ghcr.io/lumenpink/devcontainer-features/wasm-pack:0": {}
+	}
+	
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "kubectl version",
+
+	// Use 'postStartCommand' to run commands after the container is created like starting minikube.
+	// "postStartCommand": "nohup bash -c 'minikube start &' > minikube.log 2>&1",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
